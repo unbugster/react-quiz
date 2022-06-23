@@ -1,6 +1,6 @@
 import Answer from "./Answer"
 
-const Question = () => {
+const Question = ({ questions }) => {
     return (
         <div>
             <div className="question">Text of the Question</div>
@@ -11,8 +11,7 @@ const Question = () => {
                 <Answer />
             </div>
         </div>
-
     )
-}
+};
 
 export default Question

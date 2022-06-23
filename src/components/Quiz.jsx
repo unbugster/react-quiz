@@ -8,14 +8,14 @@ const Quiz = () => {
     return (
         <div className="quiz">
             <div className="score">
-                Question 1\8
+                Question {quizState.currentQuestionIndex + 1}\{quizState.questions.length}
             </div>
-            <Question questions={quizState.questions} />
+            <Question />
             <div
                 className="next-button"
                 onClick={() => dispatch({ type: 'NEXT_QUESTION' })}
             >Next question</div>
         </div >
-    )
+    );
 }
-export default Quiz
+export default Quiz;

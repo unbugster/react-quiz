@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { QuizContext } from "../contexts/quiz";
 
 const Question = () => {
-    const [quizState, dispatch] = useContext(QuizContext);
+    const [quizState, _dispatch] = useContext(QuizContext);
     const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
 
     return (
@@ -12,10 +12,9 @@ const Question = () => {
                 {currentQuestion.question}
             </div>
             <div className="answers">
-                <Answer />
-                <Answer />
-                <Answer />
-                <Answer />
+                {quizState.answers.map((answer, index) => (
+                    <Answer key={index} answerText={answer} />
+                ))}
             </div>
         </div>
     );

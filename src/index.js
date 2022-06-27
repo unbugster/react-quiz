@@ -7,9 +7,7 @@ import { QuizeProvider } from './contexts/quiz';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <QuizeProvider>
-      <Quiz />
-    </QuizeProvider>
-  </React.StrictMode>
+  <QuizeProvider>
+    <Quiz />
+  </QuizeProvider>
 );
